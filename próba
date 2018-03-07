@@ -1,0 +1,25 @@
+import numpy as np
+
+
+v=np.random.randint(0,100,30)
+min=v[0]
+max=v[0]
+minh=[]
+maxh=[]
+for i in range(v.size):
+    if v[i] > max:
+        max=v[i]
+        maxh=[]
+        maxh.append(i)
+    elif v[i] < min:
+        min=v[i]
+        minh=[]
+        minh.append(i)
+    elif v[i] == max:
+        maxh.append(i)
+    elif v[i] == min:
+        minh.append(i)
+
+print(v)
+print(max,min)
+print(maxh,minh)
